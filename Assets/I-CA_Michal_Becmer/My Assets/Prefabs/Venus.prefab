@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5695098196354104112}
   - component: {fileID: 944814636900761331}
   - component: {fileID: 137725948630303172}
+  - component: {fileID: 2780940948680806278}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Untagged
@@ -126,3 +127,17 @@ MonoBehaviour:
   speed: 0.078
   radius: 6.7
   angle: 0
+--- !u!114 &2780940948680806278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492619009742484500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4cd46f91d26f04dabbe545aa286959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 7492619009742484500}
+  rotationSpeed: {x: 0, y: 0.18, z: 0}

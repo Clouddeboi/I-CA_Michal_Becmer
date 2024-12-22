@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1361294594398787528}
   - component: {fileID: 3590384213101609324}
   - component: {fileID: 8998202748015533888}
+  - component: {fileID: 8614014132070487991}
   m_Layer: 0
   m_Name: moon
   m_TagString: Untagged
@@ -125,6 +126,20 @@ MonoBehaviour:
   speed: 0.22
   radius: 0.35
   angle: 0
+--- !u!114 &8614014132070487991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7124551813501518431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4cd46f91d26f04dabbe545aa286959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 7124551813501518431}
+  rotationSpeed: {x: 0, y: 10, z: 0}
 --- !u!1 &7762777468387388635
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +153,7 @@ GameObject:
   - component: {fileID: 7698865237777564045}
   - component: {fileID: 6450010050843224895}
   - component: {fileID: 2489046465803647788}
+  - component: {fileID: 8458108039273706660}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -253,3 +269,17 @@ MonoBehaviour:
   speed: 0.067
   radius: 9.3
   angle: 0
+--- !u!114 &8458108039273706660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7762777468387388635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4cd46f91d26f04dabbe545aa286959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 7762777468387388635}
+  rotationSpeed: {x: 0, y: 46, z: 0}

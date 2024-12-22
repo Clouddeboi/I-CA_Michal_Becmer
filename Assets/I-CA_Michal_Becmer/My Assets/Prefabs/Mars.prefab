@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7866749685171261943}
   - component: {fileID: 7388765107148305525}
   - component: {fileID: 8710803980813408698}
+  - component: {fileID: 5284861101647701688}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Untagged
@@ -126,3 +127,17 @@ MonoBehaviour:
   speed: 0.053
   radius: 14.2
   angle: 0
+--- !u!114 &5284861101647701688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4048140312571902264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4cd46f91d26f04dabbe545aa286959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 4048140312571902264}
+  rotationSpeed: {x: 0, y: 24, z: 0}

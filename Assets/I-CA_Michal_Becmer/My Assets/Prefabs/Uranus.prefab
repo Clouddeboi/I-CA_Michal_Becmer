@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6690935980589608144}
   - component: {fileID: 3609898791472329668}
   - component: {fileID: 3916075397303889616}
+  - component: {fileID: 4925144968461904466}
   m_Layer: 0
   m_Name: Uranus
   m_TagString: Untagged
@@ -125,3 +126,17 @@ MonoBehaviour:
   speed: 0.015
   radius: 178.3
   angle: 0
+--- !u!114 &4925144968461904466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8660091732197644176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4cd46f91d26f04dabbe545aa286959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 8660091732197644176}
+  rotationSpeed: {x: 0, y: 14.7, z: 0}

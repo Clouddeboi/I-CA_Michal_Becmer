@@ -3,12 +3,12 @@ using UnityEngine;
 public class PlanetOrbit : MonoBehaviour
 {
     public Transform target; //Target object to rotate around
-    public float speed = 5f; // Set a fixed speed of the movement
+    public float speed = 5f; //Set a fixed speed of the movement
     public float radius = 3f; //radius of the path
     public float angle = 0f; //current angle of the object
 
-    private float targetRadius; // Target radius for smooth transition
-    private float radiusVelocity = 0f; // Time to transition to new radius
+    private float targetRadius; //Target radius for smooth transition
+    private float radiusVelocity = 0f; //Time to transition to new radius
 
     private float smoothTime = 4f;
 
@@ -30,6 +30,6 @@ public class PlanetOrbit : MonoBehaviour
 
         transform.position = new Vector3(x, y, z);
 
-        angle += speed * Time.deltaTime; // Keep the speed constant
+        angle += speed * Time.deltaTime; //Keep the speed constant
     }
 }

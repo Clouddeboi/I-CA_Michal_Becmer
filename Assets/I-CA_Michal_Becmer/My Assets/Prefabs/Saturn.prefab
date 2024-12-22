@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2770182013581547089}
   - component: {fileID: 5272695189792664054}
   - component: {fileID: 4721274889190320956}
+  - component: {fileID: 7859404463262238155}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: Untagged
@@ -126,3 +127,17 @@ MonoBehaviour:
   speed: 0.021
   radius: 88.6
   angle: 0
+--- !u!114 &7859404463262238155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4691632182998487382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4cd46f91d26f04dabbe545aa286959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 4691632182998487382}
+  rotationSpeed: {x: 0, y: 36.8, z: 0}

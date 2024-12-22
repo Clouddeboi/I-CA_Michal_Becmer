@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3539362157949112777}
   - component: {fileID: 1386006764837962031}
   - component: {fileID: 6440492986776213677}
+  - component: {fileID: 5522680426043385620}
   m_Layer: 0
   m_Name: Pluto
   m_TagString: Untagged
@@ -125,3 +126,17 @@ MonoBehaviour:
   speed: 0.01
   radius: 367
   angle: 0
+--- !u!114 &5522680426043385620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044379603897148291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4cd46f91d26f04dabbe545aa286959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 2044379603897148291}
+  rotationSpeed: {x: 0, y: 12, z: 0}

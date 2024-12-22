@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/I-CA_Michal_Becmer/My Assets/Scenes/InProgress/Main_Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: a84a47b78c0161f4eb8fa96ebc247aa7, type: 3}
   m_UseUCBPForAssetBundles: 0

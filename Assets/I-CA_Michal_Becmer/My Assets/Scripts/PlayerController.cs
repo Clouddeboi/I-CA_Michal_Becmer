@@ -54,29 +54,38 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator PlayerMoveTowards(Vector3 target)
     {
-        //Theres no "floor" we in space lol
-        //so we don't need to have an offset
-        //float playerDistanceToFloor = transform.position.y - target.y;
-        //target.y += playerDistanceToFloor;
-        
-        while(Vector3.Distance(transform.position, target) > 0f)
+        //Calculate direction to target
+        Vector3 direction = target - transform.position;
+        direction.y = 0; //Ensures rotation is only on the horizontal plane
+
+        //First rotate the player towards the target
+        Quaternion targetRotation = Quaternion.LookRotation(direction.normalized);
+        while (Quaternion.Angle(transform.rotation, targetRotation) > 0f)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            yield return null;
+        }
+
+        //Then move the player towards the target
+        while (Vector3.Distance(transform.position, target) > 0f)
         {
             Vector3 destination = Vector3.MoveTowards(transform.position, target, playerSpeed * Time.deltaTime);
             transform.position = destination;
 
-            Vector3 direction = target - transform.position;
+            //Apply velocity
             rb.linearVelocity = direction.normalized * playerSpeed;
-
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction.normalized), 
-            rotationSpeed * Time.deltaTime);
 
             yield return null;
         }
+
+        //Stop the Rigidbody's velocity to prevent sliding
+        rb.linearVelocity = Vector3.zero;
     }
 
     private void OnDrawGizmos()
     {
-        //Gizmos.color = Color.red;
-        //Gizmos.DrawSphere(targetposition, 1);
+        //A sphere at the area we are going to for debugging
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(targetposition, 0.01f);
     }
 }

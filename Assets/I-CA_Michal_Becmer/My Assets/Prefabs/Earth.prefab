@@ -267,7 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 0.067
-  radius: 9.3
+  radius: 4.65
   angle: 0
 --- !u!114 &8458108039273706660
 MonoBehaviour:

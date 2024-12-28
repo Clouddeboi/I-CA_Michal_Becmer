@@ -6,6 +6,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private Camera mainCamera; //Reference to the main camera
     [SerializeField] private Camera photoModeCamera; //Reference to the photo mode camera
     [SerializeField] private MonoBehaviour playerMovementScript; //Reference to the player's movement script
+    [SerializeField] private TakePhoto takePhotoScript;//Reference to the TakePhoto script
 
     [SerializeField] private InputAction togglePhotoModeAction; //Input action for toggling photo mode (right mouse click)
 
@@ -16,6 +17,11 @@ public class CameraManager : MonoBehaviour
         //Ensure the main camera starts active and the photo mode camera is inactive
         mainCamera.gameObject.SetActive(true);
         photoModeCamera.gameObject.SetActive(false);
+        
+        if (takePhotoScript != null)
+        {
+            takePhotoScript.enabled = false;
+        }
     }
 
     private void OnEnable()
@@ -57,6 +63,11 @@ public class CameraManager : MonoBehaviour
         {
             playerMovementScript.enabled = false;
         }
+
+        if (takePhotoScript != null)
+        {
+            takePhotoScript.enabled = true;
+        }
     }
 
     private void DisablePhotoMode()
@@ -69,6 +80,11 @@ public class CameraManager : MonoBehaviour
         if (playerMovementScript != null)
         {
             playerMovementScript.enabled = true;
+        }
+
+        if (takePhotoScript != null)
+        {
+            takePhotoScript.enabled = false;
         }
     }
 }

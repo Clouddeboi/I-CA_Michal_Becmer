@@ -270,7 +270,7 @@ Transform:
   m_GameObject: {fileID: 87712747}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 5.5670004, y: 0, z: 0}
+  m_LocalPosition: {x: 5.008, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -382,8 +382,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 128
-  boxSize: {x: 0.5, y: 0.5, z: 0.5}
-  boxOffset: {x: 0, y: 0, z: 0.25}
+  boxSize: {x: 0.5, y: 0.5, z: 1}
+  boxOffset: {x: 0, y: 0, z: 0.5}
   currentObject: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
@@ -473,7 +473,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 5.46, y: 0.65, z: -0}
+  m_LocalPosition: {x: 4.9009995, y: 0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -777,6 +777,7 @@ MonoBehaviour:
   mainCamera: {fileID: 330585545}
   photoModeCamera: {fileID: 939944904}
   playerMovementScript: {fileID: 87712753}
+  takePhotoScript: {fileID: 87712755}
   togglePhotoModeAction:
     m_Name: Toggle Photo Mode
     m_Type: 0

@@ -21,6 +21,7 @@ public class RaycastSystem : MonoBehaviour
 
     //Boolean to check if the player is facing an object
     public bool isFacingObject { get; private set; }
+    public GameObject currentObject = null;
 
     //Method to set the detection box size dynamically
     public void SetDetectionRange(Vector3 newBoxSize)
@@ -55,6 +56,8 @@ public class RaycastSystem : MonoBehaviour
                 //Log the name of the object detected
                 Debug.Log("Object detected: " + hitCollider.gameObject.name);
                 isFacingObject = true;
+                //Set the currentObject to the object being detected
+                currentObject = hitCollider.gameObject;
 
                 //Draw a debug line from the player to the detected object
                 Debug.DrawLine(transform.position, hitCollider.transform.position, Color.green);
@@ -63,6 +66,7 @@ public class RaycastSystem : MonoBehaviour
         }
         else
         {
+            currentObject = null;
             //If no objects are detected
             Debug.Log("No objects detected in the box.");
         }

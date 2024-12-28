@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5272695189792664054}
   - component: {fileID: 4721274889190320956}
   - component: {fileID: 7859404463262238155}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Saturn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

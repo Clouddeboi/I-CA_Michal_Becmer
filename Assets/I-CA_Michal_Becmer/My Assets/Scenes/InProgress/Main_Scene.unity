@@ -270,7 +270,7 @@ Transform:
   m_GameObject: {fileID: 87712747}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 5.007, y: 0, z: -0}
+  m_LocalPosition: {x: 5.5670004, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -350,21 +350,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastSystem: {fileID: 87712756}
-  checkAction:
-    m_Name: Check
+  checkObjectAction:
+    m_Name: Check Object
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: fa3c2494-aa4a-4331-81d6-68e993741560
+    m_Id: 2b0746f6-0a5d-4cee-a0b5-5be41da00044
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 95d16aad-d652-4ac1-aaeb-595414b284b5
+      m_Id: 677722dd-956c-4584-991e-48e88ab52b53
       m_Path: <Keyboard>/space
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Check
+      m_Action: Check Object
       m_Flags: 0
     m_Flags: 0
 --- !u!114 &87712756
@@ -384,6 +384,7 @@ MonoBehaviour:
     m_Bits: 128
   boxSize: {x: 0.5, y: 0.5, z: 0.5}
   boxOffset: {x: 0, y: 0, z: 0.25}
+  currentObject: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +473,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 4.9, y: 0.65, z: 0}
+  m_LocalPosition: {x: 5.46, y: 0.65, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2212,9 +2213,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.00184
       objectReference: {fileID: 0}
+    - target: {fileID: 7124551813501518431, guid: c557fb580ccf3b644b9eae8cb4cb6c96, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7762777468387388635, guid: c557fb580ccf3b644b9eae8cb4cb6c96, type: 3}
       propertyPath: m_Name
       value: Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 7762777468387388635, guid: c557fb580ccf3b644b9eae8cb4cb6c96, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8458108039273706660, guid: c557fb580ccf3b644b9eae8cb4cb6c96, type: 3}
       propertyPath: m_Enabled

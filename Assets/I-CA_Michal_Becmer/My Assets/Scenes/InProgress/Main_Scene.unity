@@ -176,6 +176,8 @@ GameObject:
   - component: {fileID: 87712748}
   - component: {fileID: 87712753}
   - component: {fileID: 87712754}
+  - component: {fileID: 87712756}
+  - component: {fileID: 87712755}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -335,6 +337,53 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &87712755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87712747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f5ce75b53006041b449b3814050646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastSystem: {fileID: 87712756}
+  checkAction:
+    m_Name: Check
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: fa3c2494-aa4a-4331-81d6-68e993741560
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 95d16aad-d652-4ac1-aaeb-595414b284b5
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Check
+      m_Flags: 0
+    m_Flags: 0
+--- !u!114 &87712756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87712747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775b84b502c53c6469819a4f4b265925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  boxSize: {x: 0.5, y: 0.5, z: 0.5}
+  boxOffset: {x: 0, y: 0, z: 0.25}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0

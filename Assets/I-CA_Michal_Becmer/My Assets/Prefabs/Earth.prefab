@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3590384213101609324}
   - component: {fileID: 8998202748015533888}
   - component: {fileID: 8614014132070487991}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: moon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 6450010050843224895}
   - component: {fileID: 2489046465803647788}
   - component: {fileID: 8458108039273706660}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Earth
   m_TagString: Untagged
   m_Icon: {fileID: 0}

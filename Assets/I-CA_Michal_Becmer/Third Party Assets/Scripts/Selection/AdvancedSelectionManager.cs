@@ -2,50 +2,44 @@ using UnityEngine;
 
 namespace GD.Selection
 {
-    /// <summary>
-    /// Allows us to attach multiple responses to a selected object
-    /// </summary>
     public class AdvancedSelectionManager : MonoBehaviour
     {
-        [SerializeField]
-        private IRayProvider rayProvider;
-
-        [SerializeField]
-        private ISelector selector;
-
-        [SerializeField]
-        private ISelectionResponse response;
+        [SerializeField] private IRayProvider rayProvider; //Ray provider (ray creation)
+        [SerializeField] private ISelector selector; //Selector (selection logic)
+        [SerializeField] private ISelectionResponse response; //Selection response (selection effects)
 
         private Transform currentSelection;
 
-        // Awake is called when the script instance is being loaded
         private void Awake()
         {
-            //get a ray provider
-            rayProvider = GetComponent<IRayProvider>();
-
-            //get a selector
-            selector = GetComponent<ISelector>();
-
-            //get a reponse
-            response = GetComponent<ISelectionResponse>();
+            //Initialize components if they aren't already assigned in the inspector
+            rayProvider = rayProvider ?? GetComponent<IRayProvider>();
+            selector = selector ?? GetComponent<ISelector>();
+            response = response ?? GetComponent<ISelectionResponse>();
         }
 
         private void Update()
         {
-            //set de-selected
+            //If there's a current selection, deselect it first
             if (currentSelection != null)
+            {
                 response.OnDeselect(currentSelection);
+            }
 
-            //create/get ray
-            selector.Check(rayProvider.CreateRay());
+            //Create a ray using the ray provider (mouse-based ray)
+            Ray ray = rayProvider.CreateRay();
 
-            //get current selection (cast ray, do tag/layer comparison)
+            //Check the selection using the selector and the created ray
+            selector.Check(ray);
+
+            //Get the current selection based on the ray hit
             currentSelection = selector.GetSelection();
 
-            //set selected
+            //If there's a valid selection, apply the selection response
             if (currentSelection != null)
+            {
                 response.OnSelect(currentSelection);
+            }
         }
     }
 }

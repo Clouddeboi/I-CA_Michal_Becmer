@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.IO;
+using System.Collections;
 
 public class TakePhoto : MonoBehaviour
 {
     [SerializeField] private RaycastSystem raycastSystem; //Reference to the RaycastSystem script
     [SerializeField] private InputAction checkObjectAction; //Input Action for checking objects
+    [SerializeField] private PhotoInventoryManager photoinventoryManager;
 
     private string photoFolderPath; //Path where photos will be saved
 
@@ -57,7 +59,7 @@ public class TakePhoto : MonoBehaviour
             raycastSystem.CheckForObject();
 
             //Check if a valid object is detected before trying to take a screenshot
-            GameObject detectedObject = raycastSystem.currentObject; // Use the public property
+            GameObject detectedObject = raycastSystem.currentObject;
 
             if (detectedObject != null)
             {
@@ -77,22 +79,31 @@ public class TakePhoto : MonoBehaviour
         {
             string planetName = objectToTakePhotoOf.name;
 
-            //Define the subfolder path for each planet
-            string planetFolderPath = Path.Combine(photoFolderPath, planetName);
-            
-            //Create the folder for the planet if it doesn't exist
-            if (!Directory.Exists(planetFolderPath))
-            {
-                Directory.CreateDirectory(planetFolderPath);
-            }
-
-            //Create a unique file name based on the object name and timestamp
-            string screenshotName = planetName + "_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".png";
-            string screenshotPath = Path.Combine(planetFolderPath, screenshotName);
-
             //Capture the screenshot
+            string screenshotPath = Path.Combine(photoFolderPath, planetName + "_photo.png");
             ScreenCapture.CaptureScreenshot(screenshotPath);
             Debug.Log($"Screenshot saved to: {screenshotPath}");
+
+            //Create a texture from the saved screenshot
+            StartCoroutine(LoadTexture(screenshotPath, planetName));
         }
+    }
+
+    private IEnumerator LoadTexture(string path, string planetName)
+    {
+        //Wait until the screenshot is saved
+        yield return new WaitForEndOfFrame();
+
+        //Load the texture from the file
+        byte[] fileData = File.ReadAllBytes(path);
+
+        //Creates a texture with the resolution of 2x2 
+        //(this doesn't matter as it will be updated when we load the file)
+        Texture2D texture = new Texture2D(2, 2);
+
+        texture.LoadImage(fileData); //Load the image into the texture
+
+        //Call the InventoryManager to add the photo to the UI
+        photoinventoryManager.DisplayPhoto(texture, planetName);
     }
 }

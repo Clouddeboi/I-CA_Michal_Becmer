@@ -31,7 +31,7 @@ public class PhotoInventoryManager : MonoBehaviour
             { "Moon", moonImage },
             { "Mars", marsImage },
             { "Sun", sunImage },
-            { "Mars", mercuryImage },
+            { "Mercury", mercuryImage },
             { "Venus", VenusImage },
             { "Jupiter", jupiterImage },
             { "Saturn", saturnImage },

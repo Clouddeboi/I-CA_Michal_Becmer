@@ -1,3 +1,4 @@
+using State;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,8 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private TakePhoto takePhotoScript;//Reference to the TakePhoto script
 
     [SerializeField] private InputAction togglePhotoModeAction; //Input action for toggling photo mode (right mouse click)
+
+    [SerializeField] private StateManager stateManager;
 
     private bool isPhotoModeActive = false; //Tracks whether photo mode is active
 
@@ -67,10 +70,11 @@ public class CameraManager : MonoBehaviour
 
         audioManager.PlaySFX(audioManager.SwitchToPhotoMode);
 
-        //Disable the player movement script
-        if (playerMovementScript != null)
+        //Call StateManager to enter Photo state
+        if (stateManager != null)
         {
-            playerMovementScript.enabled = false;
+            Debug.Log("Entered Photo State.");
+            stateManager.SetState(State.PlayerStates.GameState.Photo);
         }
 
         if (takePhotoScript != null)
@@ -85,10 +89,11 @@ public class CameraManager : MonoBehaviour
         photoModeCamera.gameObject.SetActive(false);
         mainCamera.gameObject.SetActive(true);
 
-        //Re-enable the player movement script
-        if (playerMovementScript != null)
+        //Call StateManager to leave Photo state
+        if (stateManager != null)
         {
-            playerMovementScript.enabled = true;
+            Debug.Log("Entered Default State.");
+            stateManager.SetState(State.PlayerStates.GameState.Default);
         }
 
         if (takePhotoScript != null)

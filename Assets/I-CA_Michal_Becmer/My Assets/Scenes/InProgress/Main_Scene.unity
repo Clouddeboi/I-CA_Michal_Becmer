@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 3783642}
   - component: {fileID: 3783643}
   m_Layer: 0
-  m_Name: WorldManager
+  m_Name: StateManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +162,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0246d392384a8048b0aad8f05f15175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 87712747}
+  playerController: {fileID: 87712753}
+  mainCamera: {fileID: 330585545}
+  photoModeCamera: {fileID: 939944904}
+  takePhoto: {fileID: 87712755}
+  playerUI: {fileID: 197096032}
 --- !u!1 &42827054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,6 +1336,7 @@ MonoBehaviour:
       m_Action: Toggle Photo Mode
       m_Flags: 0
     m_Flags: 0
+  stateManager: {fileID: 3783643}
 --- !u!1 &590769084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,6 +1717,7 @@ MonoBehaviour:
       m_Action: Toggle Journal
       m_Flags: 0
     m_Flags: 0
+  stateManager: {fileID: 3783643}
 --- !u!4 &646577731 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2089313492626934408, guid: 317fa1e8b245a7b449c87755a8bb3b47, type: 3}

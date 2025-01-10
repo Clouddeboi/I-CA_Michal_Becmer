@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
+using State;
 
 public class JournalManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class JournalManager : MonoBehaviour
     [SerializeField] private Button previousButton; //Previous button
     [SerializeField] private GameObject journalUI; //Reference to the journal UI
     [SerializeField] private InputAction toggleJournalAction; //InputAction for toggling journal UI visibility
+    [SerializeField] private StateManager stateManager;
 
     private int currentPageIndex = 0; //Keeps track of the current page index
     private bool isJournalVisible = false; //To track if the journal is currently visible
@@ -46,6 +48,25 @@ public class JournalManager : MonoBehaviour
     {
         isJournalVisible = !isJournalVisible; //Toggle the visibility state
         journalUI.SetActive(isJournalVisible); //Show or hide the journal UI
+
+        if(isJournalVisible == true)
+        {
+            //Call StateManager to enter Photo state
+            if (stateManager != null)
+            {
+                Debug.Log("Entered Journal State.");
+                stateManager.SetState(State.PlayerStates.GameState.Menu);
+            }
+        }
+        else
+        {
+            //Call StateManager to enter Photo state
+            if (stateManager != null)
+            {
+                Debug.Log("Entered Default State.");
+                stateManager.SetState(State.PlayerStates.GameState.Default);
+            }
+        }
     }
 
     //Method to display a page based on the current index

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7339878006362035834}
   - component: {fileID: 5852117196206136555}
   - component: {fileID: 6783557872957061760}
-  m_Layer: 19
+  m_Layer: 7
   m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

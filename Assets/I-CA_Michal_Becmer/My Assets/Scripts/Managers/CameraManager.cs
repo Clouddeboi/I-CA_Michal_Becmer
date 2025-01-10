@@ -12,6 +12,13 @@ public class CameraManager : MonoBehaviour
 
     private bool isPhotoModeActive = false; //Tracks whether photo mode is active
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void Start()
     {
         //Ensure the main camera starts active and the photo mode camera is inactive
@@ -57,6 +64,8 @@ public class CameraManager : MonoBehaviour
         //Switch to the photo mode camera
         mainCamera.gameObject.SetActive(false);
         photoModeCamera.gameObject.SetActive(true);
+
+        audioManager.PlaySFX(audioManager.SwitchToPhotoMode);
 
         //Disable the player movement script
         if (playerMovementScript != null)

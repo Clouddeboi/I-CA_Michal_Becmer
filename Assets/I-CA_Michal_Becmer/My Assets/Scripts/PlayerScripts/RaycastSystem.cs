@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RaycastSystem : MonoBehaviour
 {
-    // Reference to the audio manager (for future functionality if needed)
+    //Reference to the audio manager (for future functionality if needed)
     AudioManager audioManager;
 
     private void Awake()

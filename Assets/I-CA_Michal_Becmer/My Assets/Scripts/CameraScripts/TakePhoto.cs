@@ -9,10 +9,14 @@ public class TakePhoto : MonoBehaviour
     [SerializeField] private InputAction checkObjectAction; //Input Action for checking objects
     [SerializeField] private PhotoInventoryManager photoinventoryManager;
 
+    AudioManager audioManager;
+
     private string photoFolderPath; //Path where photos will be saved
 
     private void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
         //Automatically find RaycastSystem on the same GameObject if not assigned
         if (raycastSystem == null)
         {
@@ -83,6 +87,8 @@ public class TakePhoto : MonoBehaviour
             string screenshotPath = Path.Combine(photoFolderPath, planetName + "_photo.png");
             ScreenCapture.CaptureScreenshot(screenshotPath);
             Debug.Log($"Screenshot saved to: {screenshotPath}");
+
+            audioManager.PlaySFX(audioManager.TakePhoto);
 
             //Create a texture from the saved screenshot
             StartCoroutine(LoadTexture(screenshotPath, planetName));

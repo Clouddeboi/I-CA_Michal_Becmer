@@ -9,6 +9,10 @@ public class AudioManager : MonoBehaviour
 
     [Header("---Audio Clips---")]
     public AudioClip backgroundMusic;   
+    public AudioClip SwitchToPhotoMode;
+    public AudioClip TakePhoto;
+    public AudioClip UIHover;
+    public AudioClip Notification;
 
     //When the game starts we play the background music
     private void Start()

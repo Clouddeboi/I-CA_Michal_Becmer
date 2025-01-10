@@ -3117,6 +3117,10 @@ MonoBehaviour:
   musicSource: {fileID: 475617751}
   SFXSource: {fileID: 1908835536}
   backgroundMusic: {fileID: 8300000, guid: 24f409261bbb3364da3f958eb3c265f1, type: 3}
+  SwitchToPhotoMode: {fileID: 8300000, guid: 97101debedcc2dc4884036aefa22d003, type: 3}
+  TakePhoto: {fileID: 8300000, guid: b132dc57920f56e469c23eb7375f8825, type: 3}
+  UIHover: {fileID: 8300000, guid: 1e48227e75c4b8a4cbe22d81abcfc2a4, type: 3}
+  Notification: {fileID: 8300000, guid: b3355608ac1ffee42882951716bae6d4, type: 3}
 --- !u!1 &1634070306
 GameObject:
   m_ObjectHideFlags: 0

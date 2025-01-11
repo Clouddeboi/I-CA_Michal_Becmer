@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 8458108039273706660}
   m_Layer: 11
   m_Name: Earth
-  m_TagString: Untagged
+  m_TagString: Earth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

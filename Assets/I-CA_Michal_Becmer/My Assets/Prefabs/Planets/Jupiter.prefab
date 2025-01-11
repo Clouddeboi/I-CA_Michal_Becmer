@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7250908427213879239}
   m_Layer: 7
   m_Name: Jupiter
-  m_TagString: Untagged
+  m_TagString: Jupiter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

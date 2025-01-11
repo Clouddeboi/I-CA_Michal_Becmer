@@ -6,6 +6,14 @@ TagManager:
   tags:
   - Audio
   - Mars
+  - Mercury
+  - Venus
+  - Earth
+  - Jupiter
+  - Saturn
+  - Uranus
+  - Neptune
+  - Pluto
   layers:
   - Default
   - TransparentFX

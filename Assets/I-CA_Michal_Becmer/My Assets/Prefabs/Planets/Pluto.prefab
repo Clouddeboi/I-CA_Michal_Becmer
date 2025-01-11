@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5522680426043385620}
   m_Layer: 7
   m_Name: Pluto
-  m_TagString: Untagged
+  m_TagString: Pluto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 87712756}
   - component: {fileID: 87712755}
   - component: {fileID: 87712758}
+  - component: {fileID: 87712759}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -439,6 +440,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionIndicator: {fileID: 1012439017}
   player: {fileID: 87712751}
+--- !u!114 &87712759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87712747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc0271f12bbd1b47ab27b472f5961f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackingUI: {fileID: 974589079}
+  toggleTrackingAction:
+    m_Name: Toggle Tracking
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5972cc5f-9942-4c0c-8245-d9a64c3d108a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 007e5930-95b6-4272-b6ee-9de4b48efa5a
+      m_Path: <Keyboard>/m
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Toggle Tracking
+      m_Flags: 0
+    m_Flags: 0
+  stateManager: {fileID: 3783643}
 --- !u!1 &166702710
 GameObject:
   m_ObjectHideFlags: 0
@@ -4187,7 +4219,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Uranus
+  m_text: Neptune
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}

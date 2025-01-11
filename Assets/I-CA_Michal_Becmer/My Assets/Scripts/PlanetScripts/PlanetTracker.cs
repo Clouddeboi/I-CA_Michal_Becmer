@@ -40,6 +40,21 @@ public class PlanetTracker : MonoBehaviour
         }
     }
 
+    public void ToggleTrackingPlanetByTag(string planetTag)
+    {
+        //Check if the same planet is already being tracked
+        if (isTracking && trackedPlanet.CompareTag(planetTag))
+        {
+            //If the same planet is clicked, stop tracking
+            StopTracking();
+        }
+        else
+        {
+            //If it's a new planet, start tracking
+            TrackPlanetByTag(planetTag);
+        }
+    }
+
     //Method to start tracking a planet by its tag
     public void TrackPlanetByTag(string planetTag)
     {

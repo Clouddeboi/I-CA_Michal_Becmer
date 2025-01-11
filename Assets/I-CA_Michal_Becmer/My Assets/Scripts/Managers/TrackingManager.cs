@@ -7,7 +7,7 @@ public class TrackingManager : MonoBehaviour
 {
     [SerializeField] private GameObject trackingUI;//Reference to the tracking UI
     [SerializeField] private InputAction toggleTrackingAction;//InputAction for toggling UI visibility
-    [SerializeField] private StateManager stateManager;//Reference to the StateManager
+    [SerializeField] private StateManager stateManager;//Reference to the StateManager 
 
     private bool isTrackingUIVisible = false;//To track if the tracking UI is currently visible
 
@@ -45,6 +45,7 @@ public class TrackingManager : MonoBehaviour
             {
                 Debug.Log("Entered Tracking State.");
                 stateManager.SetState(State.PlayerStates.GameState.Menu);
+
             }
         }
         else

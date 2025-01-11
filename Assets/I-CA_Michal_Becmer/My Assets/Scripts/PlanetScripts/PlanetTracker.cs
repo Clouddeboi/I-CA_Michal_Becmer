@@ -4,6 +4,7 @@ public class PlanetTracker : MonoBehaviour
 {
     [SerializeField] private RectTransform directionIndicator;//Arrow on the canvas
     [SerializeField] private Transform player;//Reference to the player's Transform
+    [SerializeField] private GameObject indicator;//Reference to the indicator UI
 
     private Transform trackedPlanet;//Current planet being tracked
     private bool isTracking = false;//Whether tracking is active
@@ -12,6 +13,7 @@ public class PlanetTracker : MonoBehaviour
     {
         if (isTracking && trackedPlanet != null)
         {
+            indicator.SetActive(true);
             //Calculate direction from player to planet on the X-Z plane
             Vector3 directionToPlanet = trackedPlanet.position - player.position;
             //Ignore vertical difference in 3D space
@@ -31,6 +33,10 @@ public class PlanetTracker : MonoBehaviour
                 //Rotate the UI indicator to point in the direction
                 directionIndicator.localRotation = Quaternion.Euler(0, 0, angle);
             }
+        }
+        else
+        {
+            indicator.SetActive(false);
         }
     }
 

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class PhotoInventoryManager : MonoBehaviour
 {
+    [Header("---Planet Images---")]
     //[SerializeField] private Image planetImage; //Reference to the UI Image component where the photo will be displayed
     [SerializeField] private Image sunImage;
     [SerializeField] private Image earthImage;
@@ -19,8 +20,23 @@ public class PhotoInventoryManager : MonoBehaviour
     [SerializeField] private Image plutoImage;
     //[SerializeField] private TextMeshProUGUI planetNameText; //Reference to the UI Text component where the planet's name will be displayed
 
+    [Header("---Planet UI Game Objects---")]
+    // References to the planet UI GameObjects
+    [SerializeField] private GameObject sunObject;
+    [SerializeField] private GameObject earthObject;
+    [SerializeField] private GameObject moonObject;
+    [SerializeField] private GameObject mercuryObject;
+    [SerializeField] private GameObject venusObject;
+    [SerializeField] private GameObject marsObject;
+    [SerializeField] private GameObject jupiterObject;
+    [SerializeField] private GameObject saturnObject;
+    [SerializeField] private GameObject uranusObject;
+    [SerializeField] private GameObject neptuneObject;
+    [SerializeField] private GameObject plutoObject;
+
     //Dictionary to save planet names
     private Dictionary<string, Image> planetImageMap;
+    private Dictionary<string, GameObject> planetObjectMap;
 
     private void Start()
     {
@@ -40,26 +56,46 @@ public class PhotoInventoryManager : MonoBehaviour
             { "Pluto", plutoImage }
         };
 
-        //Ensure all references are set up
-        if (earthImage == null || marsImage == null)
+        planetObjectMap = new Dictionary<string, GameObject>
         {
-            Debug.LogError("Missing references to UI components");
-        }
+            { "Earth", earthObject },
+            { "Moon", moonObject },
+            { "Mars", marsObject },
+            { "Sun", sunObject },
+            { "Mercury", mercuryObject },
+            { "Venus", venusObject },
+            { "Jupiter", jupiterObject },
+            { "Saturn", saturnObject },
+            { "Uranus", uranusObject },
+            { "Neptune", neptuneObject },
+            { "Pluto", plutoObject }
+        };
+
     }
 
     //Method to display the photo in the UI
     public void DisplayPhoto(Texture2D texture, string planetName)
     {
-        if (texture != null && planetImageMap.ContainsKey(planetName))
+        if (texture != null)
         {
-            //Get the correct Image component based on the planet name
-            Image targetImage = planetImageMap[planetName];
+            if(planetImageMap.ContainsKey(planetName))
+            {
+                //Get the correct Image component based on the planet name
+                Image targetImage = planetImageMap[planetName];
 
-            //Set the sprite of the Image component to the captured texture
-            targetImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                //Set the sprite of the Image component to the captured texture
+                targetImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
 
-            //Set the name of the planet in the UI text
-            //planetNameText.text = planetName;
+                //Set the name of the planet in the UI text
+                //planetNameText.text = planetName;
+                // Activate the corresponding planet GameObject
+            }
+
+            if (planetObjectMap.ContainsKey(planetName))
+            {
+                GameObject targetPlanetObject = planetObjectMap[planetName];
+                targetPlanetObject.SetActive(true);
+            }
         }
         else
         {

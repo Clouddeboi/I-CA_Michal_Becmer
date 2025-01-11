@@ -39,7 +39,7 @@ namespace GD.Selection
             string objectLayer = LayerMask.LayerToName(obj.gameObject.layer);
 
             //Update the UI Text element with the object's name and layer
-            uiText.text = "Object: " + objectName + "\nLayer: " + objectLayer;
+            uiText.text = "Object: " + objectName + "\nType: " + objectLayer;
 
             //Track the hovered object
             currentHoveredObject = obj;

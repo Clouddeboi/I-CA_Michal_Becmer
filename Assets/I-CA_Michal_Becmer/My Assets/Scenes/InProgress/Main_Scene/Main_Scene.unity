@@ -5563,6 +5563,56 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
+  - voiceLine: {fileID: 8300000, guid: e260d55a28156474ab16c3f639db54bb, type: 3}
+    subtitleText: 'Oh and one more thing, if for some bizarre reason the photos you
+      just took, don''t appear in your journal. '
+    requiresInput: 0
+    inputAction:
+      m_Name: Input
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d4b5ef2a-9b9f-43bf-9983-395b74d09901
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+  - voiceLine: {fileID: 8300000, guid: 56e35c84ff4467a4dac47704b69f71fc, type: 3}
+    subtitleText: Just take a couple more, the Camera system has been encountering
+      some issues recently after it's last maintenance check, nothing to worry about.
+    requiresInput: 0
+    inputAction:
+      m_Name: Input
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d4b5ef2a-9b9f-43bf-9983-395b74d09901
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+  - voiceLine: {fileID: 8300000, guid: e5ca2421c7177f248a713ea1d80b7570, type: 3}
+    subtitleText: Well, apart from the faulty spacecraft your in, that is.
+    requiresInput: 0
+    inputAction:
+      m_Name: Input
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d4b5ef2a-9b9f-43bf-9983-395b74d09901
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+  - voiceLine: {fileID: 8300000, guid: f98b46cd8a2e41442828e05e0f059a35, type: 3}
+    subtitleText: That's it for now, Houston out.
+    requiresInput: 0
+    inputAction:
+      m_Name: Input
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d4b5ef2a-9b9f-43bf-9983-395b74d09901
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
 --- !u!1 &1008436168
 GameObject:
   m_ObjectHideFlags: 0

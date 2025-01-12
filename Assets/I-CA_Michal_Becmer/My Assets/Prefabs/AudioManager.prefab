@@ -201,6 +201,10 @@ MonoBehaviour:
   Track: {fileID: 8300000, guid: 10b56a6df59cace42898ae3142137518, type: 3}
   InterstellarReference: {fileID: 8300000, guid: d7f1cc9815c5af64599df2fc1cb6fc0e, type: 3}
   SafeTravels: {fileID: 8300000, guid: 0c1d856e0c3313545bfbf271c910f775, type: 3}
+  OneMorething: {fileID: 8300000, guid: e260d55a28156474ab16c3f639db54bb, type: 3}
+  Problems: {fileID: 8300000, guid: 56e35c84ff4467a4dac47704b69f71fc, type: 3}
+  FaultySpaceCraft: {fileID: 8300000, guid: e5ca2421c7177f248a713ea1d80b7570, type: 3}
+  HoustonOut: {fileID: 8300000, guid: f98b46cd8a2e41442828e05e0f059a35, type: 3}
 --- !u!1 &6693318516656934678
 GameObject:
   m_ObjectHideFlags: 0

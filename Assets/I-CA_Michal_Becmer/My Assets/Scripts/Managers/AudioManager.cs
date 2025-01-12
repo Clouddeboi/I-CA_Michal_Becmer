@@ -37,6 +37,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip Track;
     public AudioClip InterstellarReference;//Hehehehe
     public AudioClip SafeTravels;
+    public AudioClip OneMorething;
+    public AudioClip Problems;
+    public AudioClip FaultySpaceCraft;
+    public AudioClip HoustonOut;
 
     //When the game starts we play the background music
     private void Start()

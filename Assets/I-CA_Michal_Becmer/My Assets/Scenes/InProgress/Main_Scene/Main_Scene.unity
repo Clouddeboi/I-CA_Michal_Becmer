@@ -872,6 +872,7 @@ RectTransform:
   - {fileID: 1798285346}
   - {fileID: 187181646}
   - {fileID: 1012439017}
+  - {fileID: 1619685396}
   m_Father: {fileID: 1713808211}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5226,6 +5227,95 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &980197167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 980197168}
+  - component: {fileID: 980197169}
+  m_Layer: 0
+  m_Name: TutorialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &980197168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980197167}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1580852266}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &980197169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980197167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4669364e8ce7c5240932daeb4653d14a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subtitleText: {fileID: 1619685397}
+  audioManager: {fileID: 9002626365557113327}
+  tutorialSteps:
+  - voiceLine: {fileID: 8300000, guid: 5d6fd9597a11f4b4dbec6966aa2af055, type: 3}
+    subtitleText: Um, is this thing on?
+  - voiceLine: {fileID: 8300000, guid: 1ca47e999c0813c4da91d5c6d98622fd, type: 3}
+    subtitleText: Hello?
+  - voiceLine: {fileID: 8300000, guid: e8fc4ab1b8288bd4eabf121a6b34ee0b, type: 3}
+    subtitleText: Ah, here we are!
+  - voiceLine: {fileID: 8300000, guid: 643697c5e49245d49aaf1aa74aa1c58d, type: 3}
+    subtitleText: Welcome space voyager 26!
+  - voiceLine: {fileID: 8300000, guid: e4d6abac614cdb049aa431cc570b223b, type: 3}
+    subtitleText: You have been tasked to take photographs of the planets in our
+      solar system!
+  - voiceLine: {fileID: 8300000, guid: 7ebd9c6f63527d5408e51e002d178e9f, type: 3}
+    subtitleText: What?
+  - voiceLine: {fileID: 8300000, guid: f6ad1ffcd1d2f194abd102c4cb9e3028, type: 3}
+    subtitleText: why do we not have any photographs of the planets?
+  - voiceLine: {fileID: 8300000, guid: 61807ccdc08a66e4299cbd9fe8447da7, type: 3}
+    subtitleText: Well lets just say Jim NASA dropped his sandwich on a delete all
+      photo's switch.
+  - voiceLine: {fileID: 8300000, guid: 25cb395238e19a6448891e4b0121f0eb, type: 3}
+    subtitleText: Why do we have a switch like that?
+  - voiceLine: {fileID: 8300000, guid: 1ff885d4e1a21794d8549edaae461f29, type: 3}
+    subtitleText: I'm not sure, but i'll bring it up at the next meeting.
+  - voiceLine: {fileID: 8300000, guid: cb91a6e95d8861246b64ce6e20ed23ef, type: 3}
+    subtitleText: Anyways, back on task. Let's remind you how your spacecraft operates.
+  - voiceLine: {fileID: 8300000, guid: fd0bbce741c1af844baf81d1776e72da, type: 3}
+    subtitleText: First press W on your keyboard to zoom in the camera, and S to
+      zoom out.
+  - voiceLine: {fileID: 8300000, guid: eca0269cb7efadc4ab6780c2244d32d7, type: 3}
+    subtitleText: Now press anywhere you like with left click to travel there!
+  - voiceLine: {fileID: 8300000, guid: ed0dfb4402a44314f97b764d485ab6f5, type: 3}
+    subtitleText: Now face a planet and press right click to enter Photo Mode and
+      then spacebar to take a photo of the planet!
+  - voiceLine: {fileID: 8300000, guid: 530f09fc2ae588049bd735e5674225d1, type: 3}
+    subtitleText: You can now press tab to view all your planets in your journal!
+  - voiceLine: {fileID: 8300000, guid: 10b56a6df59cace42898ae3142137518, type: 3}
+    subtitleText: Now to track a planet, press M to choose one from your tracking
+      menu.
+  - voiceLine: {fileID: 8300000, guid: d7f1cc9815c5af64599df2fc1cb6fc0e, type: 3}
+    subtitleText: " think that about covers it. But Voyager, beware\u2014space is
+      an unpredictable and dangerous place. Do not go gentle into that good night."
+  - voiceLine: {fileID: 8300000, guid: 0c1d856e0c3313545bfbf271c910f775, type: 3}
+    subtitleText: Safe travels, Voyager.
 --- !u!1 &1008436168
 GameObject:
   m_ObjectHideFlags: 0
@@ -7627,6 +7717,7 @@ Transform:
   - {fileID: 471547354}
   - {fileID: 1360510765}
   - {fileID: 42827055}
+  - {fileID: 980197168}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1581585247 stripped
@@ -7773,6 +7864,142 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613755404}
+  m_CullTransparentMesh: 1
+--- !u!1 &1619685395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1619685396}
+  - component: {fileID: 1619685398}
+  - component: {fileID: 1619685397}
+  m_Layer: 5
+  m_Name: Subtitles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1619685396
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619685395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 197096033}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 1000, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1619685397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619685395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1619685398
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619685395}
   m_CullTransparentMesh: 1
 --- !u!1 &1634070306
 GameObject:
@@ -10408,6 +10635,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeec66654001cba4abd947284e304c0c, type: 3}
+--- !u!114 &9002626365557113327 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 676117961645731734, guid: aeec66654001cba4abd947284e304c0c, type: 3}
+  m_PrefabInstance: {fileID: 9002626365557113326}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f694265ae3e0034d941ffc2e852db9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &9012467547602750914 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1124830636723450303, guid: 1edb8b0b2041dbf44921e8db6d80b493, type: 3}

@@ -182,6 +182,25 @@ MonoBehaviour:
   TakePhoto: {fileID: 8300000, guid: b132dc57920f56e469c23eb7375f8825, type: 3}
   UIHover: {fileID: 8300000, guid: 1e48227e75c4b8a4cbe22d81abcfc2a4, type: 3}
   Notification: {fileID: 8300000, guid: b3355608ac1ffee42882951716bae6d4, type: 3}
+  Hello: {fileID: 8300000, guid: 1ca47e999c0813c4da91d5c6d98622fd, type: 3}
+  What: {fileID: 8300000, guid: 7ebd9c6f63527d5408e51e002d178e9f, type: 3}
+  Excellent: {fileID: 8300000, guid: 7afbe7d4d9f95f9498e6f502cfceaf8f, type: 3}
+  IsThisOn: {fileID: 8300000, guid: 5d6fd9597a11f4b4dbec6966aa2af055, type: 3}
+  HereWeGo: {fileID: 8300000, guid: e8fc4ab1b8288bd4eabf121a6b34ee0b, type: 3}
+  Welcome: {fileID: 8300000, guid: 643697c5e49245d49aaf1aa74aa1c58d, type: 3}
+  YouHaveBeen: {fileID: 8300000, guid: e4d6abac614cdb049aa431cc570b223b, type: 3}
+  WhyDoWeNot: {fileID: 8300000, guid: f6ad1ffcd1d2f194abd102c4cb9e3028, type: 3}
+  JimNASA: {fileID: 8300000, guid: 61807ccdc08a66e4299cbd9fe8447da7, type: 3}
+  WhySwitch: {fileID: 8300000, guid: 25cb395238e19a6448891e4b0121f0eb, type: 3}
+  NextMeeting: {fileID: 8300000, guid: 1ff885d4e1a21794d8549edaae461f29, type: 3}
+  Anyways: {fileID: 8300000, guid: cb91a6e95d8861246b64ce6e20ed23ef, type: 3}
+  PressWAndS: {fileID: 8300000, guid: fd0bbce741c1af844baf81d1776e72da, type: 3}
+  Traversal: {fileID: 8300000, guid: eca0269cb7efadc4ab6780c2244d32d7, type: 3}
+  Photo: {fileID: 8300000, guid: ed0dfb4402a44314f97b764d485ab6f5, type: 3}
+  Tab: {fileID: 8300000, guid: 530f09fc2ae588049bd735e5674225d1, type: 3}
+  Track: {fileID: 8300000, guid: 10b56a6df59cace42898ae3142137518, type: 3}
+  InterstellarReference: {fileID: 8300000, guid: d7f1cc9815c5af64599df2fc1cb6fc0e, type: 3}
+  SafeTravels: {fileID: 8300000, guid: 0c1d856e0c3313545bfbf271c910f775, type: 3}
 --- !u!1 &6693318516656934678
 GameObject:
   m_ObjectHideFlags: 0

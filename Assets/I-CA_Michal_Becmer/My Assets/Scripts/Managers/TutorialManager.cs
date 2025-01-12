@@ -2,17 +2,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class TutorialManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text subtitleText;//Reference to the UI Text for subtitles
     [SerializeField] private AudioManager audioManager;//Reference to the AudioManager
 
+    //[SerializeField] private InputActionAsset inputActions;//Reference to the Input Actions Asset
+
+    /*
+        Note:
+        This doesn't feel like an efficient way to do this but I have never codded a tutorial before,
+        I would prefer to maybe activate a script whenever we get to a certain voiceline 
+        but that wasn't working for me.
+        If it works don't fix it i suppose lmao.
+    */
     [System.Serializable]
     public class TutorialStep
     {
         public AudioClip voiceLine;//Voice line to play
         public string subtitleText;//Subtitle to display
+        public bool requiresInput;//Bool to check if this step requires input to proceed
+        public InputAction inputAction;//The input action to trigger for this step
     }
 
     [Header("Tutorial Steps")]
@@ -21,14 +33,26 @@ public class TutorialManager : MonoBehaviour
 
     private int currentStepIndex = 0;
 
+    private void Awake()
+    {
+        //Initialize all the input actions from the asset
+        foreach (var step in tutorialSteps)
+        {
+            //Enable input actions
+            step.inputAction?.Enable();
+        }
+    }
+
     private void Start()
     {
         if (tutorialSteps.Length > 0)
         {
+            //Start the tutorial
             StartCoroutine(PlayTutorial());
         }
         else
         {
+            //Warning if no tutorial steps are set
             Debug.LogWarning("No tutorial steps found!");
         }
     }
@@ -60,14 +84,32 @@ public class TutorialManager : MonoBehaviour
 
             //Clear the subtitle after this step
             subtitleText.text = "";
-            
-            //Wait 1 seconds before the next step
+
+            //If this step requires input, wait for it
+            if (step.requiresInput && step.inputAction != null)
+            {
+                //Wait until the input is triggered
+                yield return new WaitUntil(() => step.inputAction.triggered);
+            }
+
+            //Wait 1 second before the next step
             yield return new WaitForSeconds(1f);
 
             //Move to the next step
             currentStepIndex++;
         }
 
+        //Log when the tutorial is completed
         Debug.Log("Tutorial finished!");
+    }
+
+    private void OnDisable()
+    {
+        //Disable the input actions when the tutorial ends or the game is closed
+        foreach (var step in tutorialSteps)
+        {
+            //Disable input actions
+            step.inputAction?.Disable();
+        }
     }
 }

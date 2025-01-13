@@ -14,7 +14,6 @@ public class EndingsVoicelinesManager : MonoBehaviour
     {
         public AudioClip voiceLine;//Voice line to play
         public string subtitleText;//Subtitle to display
-        public bool requiresInput;//Bool to check if this step requires input to proceed
     }
 
     [Header("Tutorial Steps")]
@@ -23,22 +22,7 @@ public class EndingsVoicelinesManager : MonoBehaviour
 
     private int currentStepIndex = 0;
 
-
-    private void Start()
-    {
-        if (endGameSteps.Length > 0)
-        {
-            //Start the EndGame
-            StartCoroutine(PlayEndGame());
-        }
-        else
-        {
-            //Warning if no tutorial steps are set
-            Debug.LogWarning("No End Game steps found!");
-        }
-    }
-
-    private IEnumerator PlayEndGame()
+    public IEnumerator PlayEndGame()
     {
         while (currentStepIndex < endGameSteps.Length)
         {

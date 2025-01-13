@@ -7002,6 +7002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   photoInventoryManager: {fileID: 1360510766}
   allPhotosTaken: 0
+  endingsVoicelinesManager: {fileID: 1871528149}
 --- !u!1 &1087751733
 GameObject:
   m_ObjectHideFlags: 0
@@ -11221,7 +11222,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subtitleText: {fileID: 1619685397}
   audioManager: {fileID: 9002626365557113327}
-  endGameSteps: []
+  endGameSteps:
+  - voiceLine: {fileID: 8300000, guid: 27911ee21e684a445a2daa919e2b77d6, type: 3}
+    subtitleText: 'Excellent work Voyager! '
+  - voiceLine: {fileID: 8300000, guid: b4f06202a62520b49b76e74075aa3522, type: 3}
+    subtitleText: 'We knew you could do it! '
+  - voiceLine: {fileID: 8300000, guid: 06ed37f428b5a8a46a57998de04b3da7, type: 3}
+    subtitleText: I'm about to go into our weekly meeting, what was i meant to talk
+      about again?
+  - voiceLine: {fileID: 8300000, guid: bc1036afda343374386ffbbc5429083f, type: 3}
+    subtitleText: Ah yes! We need to update our sandwich menu!
+  - voiceLine: {fileID: 8300000, guid: 594e929f99472cc41a106bf85d5e58bc, type: 3}
+    subtitleText: I heard they are planning on adding peanut butter and jelly sandwiches
+      to the menu.
+  - voiceLine: {fileID: 8300000, guid: 9ca5cc2784d8c234ba59998f254b3721, type: 3}
+    subtitleText: I like peanut butter and jelly sandwiches.
+  - voiceLine: {fileID: 8300000, guid: 1e591eddd8536284493ed09180a9e5ee, type: 3}
+    subtitleText: Anyways, voyager, you are probably running low on fuel, return
+      home at once we are all eager to see you.
+  - voiceLine: {fileID: 8300000, guid: 17727de155273fd44b526b6de5f57a9d, type: 3}
+    subtitleText: Thank You For Playing Space Voyager
 --- !u!1 &1909449406
 GameObject:
   m_ObjectHideFlags: 0

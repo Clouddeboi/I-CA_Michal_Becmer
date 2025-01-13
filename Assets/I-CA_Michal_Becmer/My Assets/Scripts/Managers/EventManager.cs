@@ -3,7 +3,8 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     [SerializeField] private PhotoInventoryManager photoInventoryManager;//Reference to the PhotoInventoryManager
-    [SerializeField]private bool allPhotosTaken = false;//Flag to track if all photos have been taken
+    [SerializeField] private bool allPhotosTaken = false;//Flag to track if all photos have been taken
+    [SerializeField] private EndingsVoicelinesManager endingsVoicelinesManager;
 
     private void Update()
     {
@@ -37,5 +38,6 @@ public class EventManager : MonoBehaviour
     {
         //We will add an actual event later
         Debug.Log("All photos have been taken! Event triggered.");
+        endingsVoicelinesManager.PlayEndGame();
     }
 }

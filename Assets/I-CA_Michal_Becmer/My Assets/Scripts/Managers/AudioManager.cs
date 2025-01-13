@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip UIHover;
     public AudioClip Notification;
 
-    [Header("---Voice Over---")]
+    [Header("---Tutorial Voice Over---")]
     //These are reusable voicelines
     public AudioClip Hello;
     public AudioClip What;
@@ -41,6 +41,17 @@ public class AudioManager : MonoBehaviour
     public AudioClip Problems;
     public AudioClip FaultySpaceCraft;
     public AudioClip HoustonOut;
+
+    [Header("---End Game Voice Over---")]
+    public AudioClip ExcellentJob;
+    public AudioClip WeKnew;
+    public AudioClip ImAbout;
+    public AudioClip AhYes;
+    public AudioClip Sandwich;
+    public AudioClip PeanutButter;
+    public AudioClip ILike;
+    public AudioClip ReturnHome;
+    public AudioClip ThanksForPlaying;
 
     //When the game starts we play the background music
     private void Start()

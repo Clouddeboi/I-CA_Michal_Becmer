@@ -205,6 +205,15 @@ MonoBehaviour:
   Problems: {fileID: 8300000, guid: 56e35c84ff4467a4dac47704b69f71fc, type: 3}
   FaultySpaceCraft: {fileID: 8300000, guid: e5ca2421c7177f248a713ea1d80b7570, type: 3}
   HoustonOut: {fileID: 8300000, guid: f98b46cd8a2e41442828e05e0f059a35, type: 3}
+  ExcellentJob: {fileID: 8300000, guid: 27911ee21e684a445a2daa919e2b77d6, type: 3}
+  WeKnew: {fileID: 8300000, guid: b4f06202a62520b49b76e74075aa3522, type: 3}
+  ImAbout: {fileID: 8300000, guid: 06ed37f428b5a8a46a57998de04b3da7, type: 3}
+  AhYes: {fileID: 8300000, guid: bc1036afda343374386ffbbc5429083f, type: 3}
+  Sandwich: {fileID: 8300000, guid: 06ed37f428b5a8a46a57998de04b3da7, type: 3}
+  PeanutButter: {fileID: 8300000, guid: 594e929f99472cc41a106bf85d5e58bc, type: 3}
+  ILike: {fileID: 8300000, guid: 9ca5cc2784d8c234ba59998f254b3721, type: 3}
+  ReturnHome: {fileID: 8300000, guid: 1e591eddd8536284493ed09180a9e5ee, type: 3}
+  ThanksForPlaying: {fileID: 8300000, guid: 17727de155273fd44b526b6de5f57a9d, type: 3}
 --- !u!1 &6693318516656934678
 GameObject:
   m_ObjectHideFlags: 0

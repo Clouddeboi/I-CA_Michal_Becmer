@@ -102,4 +102,10 @@ public class PhotoInventoryManager : MonoBehaviour
             Debug.LogWarning("No Image component found for planet: " + planetName);
         }
     }
+
+    //Method to get all planet GameObjects
+    public IEnumerable<GameObject> GetAllPlanetObjects()
+    {
+        return planetObjectMap.Values;
+    }
 }

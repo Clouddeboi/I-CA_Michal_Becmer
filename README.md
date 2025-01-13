@@ -11,3 +11,6 @@ https://elevenlabs.io/
 
 Yt video:
 https://www.youtube.com/watch?v=sq5DFX5N0U0
+
+Github repo:
+https://github.com/Clouddeboi/I-CA_Michal_Becmer/tree/main
